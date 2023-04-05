@@ -1,0 +1,15 @@
+; Header
+.ORIG x3000
+
+LD R1, DEC_10
+
+DO_WHILE_LOOP
+    ADD R1, R2, #-2 ; R1 <- R! - 2. Subtract R1 by 2
+    BRp DO_WHILE_LOOP
+END_DO_WHILE_LOOP
+
+HALT
+; Data
+DEC_10 .FILL #10
+
+.END
